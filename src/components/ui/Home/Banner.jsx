@@ -10,17 +10,9 @@ import image2 from '@/../public/assets/slide02.jpg';
 import image3 from '@/../public/assets/slide03.jpg';
 import { useRef, useState } from 'react';
 import Link from 'next/link';
+import UpAnimation from '@/components/Animations/UpAnimation';
 
 const Banner = () => {
-
-    const UpAnimation = ({ children }) => {
-        <>
-            {
-                children
-            }
-        </>
-    }
-
     const [activeIndex, setActiveIndex] = useState(0);
 
     const HeroBannerContent = ({
