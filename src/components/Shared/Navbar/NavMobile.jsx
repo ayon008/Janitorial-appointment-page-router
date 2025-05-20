@@ -1,5 +1,5 @@
 
-import useAuth from '@/Hooks/useAuth';
+
 import dynamic from 'next/dynamic';
 const ButtonPrimary = dynamic(() => import('@/components/Buttons/ButtonPrimary'), { ssr: false });
 import Image from 'next/image';
@@ -9,10 +9,11 @@ import logo from '@/../public/assets/Blue_and_White_Simple_Cleaning_Services_Log
 import { usePathname } from 'next/navigation';
 import { FaChevronDown } from "@react-icons/all-files/fa/FaChevronDown";
 import { poppins } from '@/components/fonts/Poppins';
- const NavMobile = ({ UserDetails, Services, Leads }) => {
-    // const { user, logOut } = useAuth();
-    const user = false;
-    const logOut = () => { }
+import useAuth from '@/hooks/useAuth';
+const NavMobile = ({ UserDetails, Services, Leads }) => {
+    const authInfo = useAuth();
+    const user = authInfo?.user;
+    const logOut = authInfo?.logOut
     const [nav, setNav] = useState(false);
     const [clicked, setClicked] = useState(false);
     const [clicked1, setClicked1] = useState(false);

@@ -1,8 +1,9 @@
-import useAuth from '@/Hooks/useAuth';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import useAuth from '@/hooks/useAuth';
 const ButtonPrimary = dynamic(() => import('@/components/Buttons/ButtonPrimary'), { ssr: false });
 const Option = dynamic(() => import('./NavItems').then((mod) => mod.Option), { ssr: false });
 
@@ -10,8 +11,9 @@ const Option = dynamic(() => import('./NavItems').then((mod) => mod.Option), { s
 const NavUser = ({ UserDetails }) => {
     const [mouse2, setMouse2] = useState(false);
     // const { user, logOut } = useAuth();
-    const user = false;
-    const logOut = () => { }
+    const authInfo = useAuth();
+    const user = authInfo?.user;
+    const logOut = authInfo?.logOut
     const userName = user?.displayName;
     const firstLetter = userName && userName[0]?.toUpperCase();
     const pathname = usePathname();
