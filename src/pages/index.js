@@ -1,17 +1,22 @@
 import ButtonTertiary from "@/components/Buttons/ButtonTertiary";
 import { poppins } from "@/components/fonts/Poppins";
 import Appointment from "@/components/Shared/Appointment/Appointment";
+import SectionTitles from "@/components/Shared/Title/SectionTitles";
 const UserReview = dynamic(() => import('@/components/Shared/Review/UserReview'), {
   ssr: false, // optional: disables server-side rendering if needed
   loading: () => <p>Loading...</p>, // optional: fallback UI while loading
 });
 import Title from "@/components/Shared/Title/Title";
+import ContactInfo from "@/components/ui/Contact/ContactInfo";
 import Banner from "@/components/ui/Home/Banner";
 import Stepper from "@/components/ui/Home/Steper";
 import Pricing from "@/components/ui/Pricing/Pricing";
 import dynamic from 'next/dynamic';
-
 const Service = dynamic(() => import('@/components/ui/Service/Service'), {
+  loading: () => <p>Loading Service...</p>,
+  ssr: false, // Optional: disable SSR if the component relies on the browser
+});
+const Team = dynamic(() => import('@/components/ui/Team/Team'), {
   loading: () => <p>Loading Service...</p>,
   ssr: false, // Optional: disable SSR if the component relies on the browser
 });
@@ -102,7 +107,17 @@ export default function Home() {
         <div id="pricing" className="max-w-[1150px] mx-auto mb-20 mt-28">
           <Pricing />
         </div>
-
+        {/* Our Team */}
+        <div className="text-center my-24 max-w-[1150px] mx-auto">
+          <Team />
+        </div>
+        {/* Contact Info */}
+        <div className="bg-white 2xl:pb-0 xl:pb-0 pb-20">
+          <SectionTitles heading={"Contact Us"} />
+          <div className="max-w-[1150px] mx-auto">
+            <ContactInfo />
+          </div>
+        </div>
       </div>
     </>
   );
