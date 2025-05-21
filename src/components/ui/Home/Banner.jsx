@@ -40,7 +40,7 @@ const Banner = () => {
                     <div className='w-fit 2xl:mx-0 xl:mx-0 mx-auto'>
                         <UpAnimation delay={1.2} key={activeIndex}>
                             <Link href={'#pricing'}>
-                                <ButtonTertiary label={buttonLabel} />
+                                <><ButtonTertiary label={buttonLabel} /></>
                             </Link>
                         </UpAnimation>
                     </div>

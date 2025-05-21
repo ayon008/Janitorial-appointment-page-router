@@ -9,7 +9,7 @@ import Service3 from '@/components/icons/Service3';
 import Service4 from '@/components/icons/Service4';
 import { poppins } from '@/components/fonts/Poppins';
 
-export default function Service () {
+export default function Service() {
     return (
         <div className="2xl:w-[1150px] xl:w-[1150px] sm:w-[90%] w-[90%] mx-auto flex 2xl:flex-row xl:flex-row flex-col gap-16 2xl:items-center xl:items-center items-start 2xl:py-16 xl:py-16 py-10">
             {/* Description of services */}
@@ -23,7 +23,7 @@ export default function Service () {
                 <p className="text-base text-[#777] font-light my-7 leading-7">Call Center Services International’s <br />management team has over 35-years of <br /> expertise in successfully establishing U.S.</p>
                 {/* Button */}
                 <Link href={'/search/exclusive-leads'}>
-                    <ButtonPrimary label={'Get Exclusive Leads'} />
+                    <><ButtonPrimary label={'Get Exclusive Leads'} /></>
                 </Link>
             </div>
             {/* Card Section */}

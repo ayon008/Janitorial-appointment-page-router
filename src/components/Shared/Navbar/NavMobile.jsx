@@ -44,7 +44,7 @@ const NavMobile = ({ UserDetails, Services, Leads }) => {
                     {
                         !user &&
                         <Link href={'/login'}>
-                            <ButtonPrimary label={'Sign In'} />
+                            <><ButtonPrimary label={'Sign In'} /></>
                         </Link>
                     }
                     <div className="btn btn-ghost btn-circle" onClick={() => setNav(true)}>

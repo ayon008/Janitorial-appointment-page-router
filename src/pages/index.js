@@ -70,7 +70,7 @@ export default function Home() {
             </div>
             <div className="mt-12">
               <Link href={'/about'}>
-                <ButtonTertiary label={'Learn More'} />
+                <><ButtonTertiary label={'Learn More'} /></>
               </Link>
             </div>
           </div>
