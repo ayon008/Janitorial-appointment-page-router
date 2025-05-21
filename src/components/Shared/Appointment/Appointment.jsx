@@ -54,7 +54,7 @@ const Appointment = () => {
 
     return (
         <div className='relative z-40'>
-            <Image src={appointment} width={1150} height={350} sizes="(max-width: 768px) 60vw, 100vw" priority alt='book-an-appointment' className='absolute h-full w-full right-0 left-0 inset-0 z-20' />
+            <Image src={appointment} width={1150} height={350} sizes="(max-width: 768px) 30vw, 100vw" priority alt='book-an-appointment' className='absolute h-full w-full right-0 left-0 inset-0 z-20' />
             <div className="relative z-30 p-10">
                 <h1
                     className={`${gilroy.className} text-white font-semibold 2xl:text-4xl xl:text-4xl text-2xl`}
