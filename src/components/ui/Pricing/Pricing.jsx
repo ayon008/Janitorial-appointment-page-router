@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import TickCircle from './TickCircle';
+// import TickCircle from './TickCircle';
 // import PaymentLink from './PaymentLink';
-import ButtonPrimary from '../Shared/Buttons/ButtonPrimary';
+
 
 const pricingPlans = [
     {
@@ -83,7 +83,7 @@ const Pricing = () => {
                     <div className='my-7 space-y-6'>
                         {plan.features.map((feature, index) => (
                             <div key={index} className='flex items-center gap-2'>
-                                <TickCircle />
+                                {/* <TickCircle /> */}
                                 <p className={`text-base  font-normal ${plan.containerclassName === 'bg-white' ? '' : 'text-white'}`}>{feature}</p>
                             </div>
                         ))}

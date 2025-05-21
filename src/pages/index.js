@@ -8,6 +8,7 @@ const UserReview = dynamic(() => import('@/components/Shared/Review/UserReview')
 import Title from "@/components/Shared/Title/Title";
 import Banner from "@/components/ui/Home/Banner";
 import Stepper from "@/components/ui/Home/Steper";
+import Pricing from "@/components/ui/Pricing/Pricing";
 import dynamic from 'next/dynamic';
 
 const Service = dynamic(() => import('@/components/ui/Service/Service'), {
@@ -96,6 +97,10 @@ export default function Home() {
         {/* Reviews */}
         <div className="my-16">
           <UserReview />
+        </div>
+        {/* Pricing */}
+        <div id="pricing" className="max-w-[1150px] mx-auto mb-20 mt-28">
+          <Pricing />
         </div>
 
       </div>
